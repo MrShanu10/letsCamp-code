@@ -18,7 +18,8 @@ const indexRoutes      = require('./routes/index')
 
 const app = express()
 //mongoose.connect('mongodb://localhost/YelpCamp',{
-    mongoose.connect('mongodb+srv://Shivendra:shivendra@cluster0.3s0ql.mongodb.net/campgrounds?retryWrites=true&w=majority',{
+    mongoose.connect(process.env.DATABASEURL,{
+   // mongoose.connect('mongodb+srv://Shivendra:shivendra@cluster0.3s0ql.mongodb.net/campgrounds?retryWrites=true&w=majority',{
     useNewUrlParser: true ,
     useUnifiedTopology: true, 
     useFindAndModify:false})
