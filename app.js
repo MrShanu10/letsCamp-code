@@ -58,6 +58,6 @@ app.use(commentRoutes)
 app.use(campgroundRoutes)
 app.use(indexRoutes)
 
-app.listen(8000,(req,res) =>{
+app.listen(process.env.PORT || 8000,(req,res) =>{
     console.log("Server started..")
 })
