@@ -17,9 +17,8 @@ const campgroundRoutes = require('./routes/campgrounds')
 const indexRoutes      = require('./routes/index')
 
 const app = express()
-//mongoose.connect('mongodb://localhost/YelpCamp',{
+
     mongoose.connect(process.env.DATABASEURL,{
-   // mongoose.connect('mongodb+srv://Shivendra:shivendra@cluster0.3s0ql.mongodb.net/campgrounds?retryWrites=true&w=majority',{
     useNewUrlParser: true ,
     useUnifiedTopology: true, 
     useFindAndModify:false})
@@ -33,7 +32,7 @@ app.locals.moment = require('moment')
 
 //Passport Config
 app.use(require('express-session')({
-    secret:'This is YelpCamp based encryption',
+    secret:'***********(your secret key)********',
     resave:false,
     saveUninitialized:false
 }))
